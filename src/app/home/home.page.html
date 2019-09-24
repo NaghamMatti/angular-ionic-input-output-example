@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Example Data from Parent
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- use the component and put data from parent -->
+  {{ dataFromChild }}
+  <app-testcomp
+    [dataInTestcompComponentFromParent]="dataParent"
+    (dataOutputFromChild)="onDataFromChild($event)"
+  ></app-testcomp>
+</ion-content>
